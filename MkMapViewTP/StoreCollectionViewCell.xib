@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Store" id="0B0-KW-7QG">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Store" id="0B0-KW-7QG" customClass="StoreCollectionViewCell" customModule="MkMapViewTP" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="369" height="260"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -51,6 +51,11 @@
                 <constraint firstItem="Epg-YF-ssf" firstAttribute="leading" secondItem="0B0-KW-7QG" secondAttribute="leading" constant="10" id="tJN-bz-heT"/>
             </constraints>
             <size key="customSize" width="369" height="260"/>
+            <connections>
+                <outlet property="latLabel" destination="Epg-YF-ssf" id="l0o-nG-xrM"/>
+                <outlet property="lonLabel" destination="5li-0s-j1E" id="yzC-N1-CYE"/>
+                <outlet property="titleLabel" destination="4E5-k5-Csu" id="wSH-eg-kvX"/>
+            </connections>
             <point key="canvasLocation" x="138.5" y="66"/>
         </collectionViewCell>
     </objects>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		083225C31FD82FB8003540B6 /* StoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083225C21FD82FB8003540B6 /* StoreCollectionViewCell.xib */; };
+		083225C51FD83263003540B6 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083225C41FD83263003540B6 /* StoreCollectionViewCell.swift */; };
 		087717CF1FBC7D0000ADF209 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087717CE1FBC7D0000ADF209 /* AppDelegate.swift */; };
 		087717D61FBC7D0000ADF209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087717D51FBC7D0000ADF209 /* Assets.xcassets */; };
 		087717D91FBC7D0000ADF209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087717D71FBC7D0000ADF209 /* LaunchScreen.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		083225C21FD82FB8003540B6 /* StoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCollectionViewCell.xib; sourceTree = "<group>"; };
+		083225C41FD83263003540B6 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		087717CB1FBC7D0000ADF209 /* MkMapViewTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MkMapViewTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		087717CE1FBC7D0000ADF209 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		087717D51FBC7D0000ADF209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				088A60B51FBDAA2000F35F49 /* UIViewController+ChildViewController.swift */,
 				088A60B71FBDB01D00F35F49 /* StoreProvider.swift */,
 				083225C21FD82FB8003540B6 /* StoreCollectionViewCell.xib */,
+				083225C41FD83263003540B6 /* StoreCollectionViewCell.swift */,
 			);
 			path = MkMapViewTP;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			files = (
 				088A60B81FBDB01D00F35F49 /* StoreProvider.swift in Sources */,
 				088A60B61FBDAA2000F35F49 /* UIViewController+ChildViewController.swift in Sources */,
+				083225C51FD83263003540B6 /* StoreCollectionViewCell.swift in Sources */,
 				088A60B31FBDA86200F35F49 /* StoreListViewController.swift in Sources */,
 				088A60A81FBD8C9000F35F49 /* Store.swift in Sources */,
 				087717CF1FBC7D0000ADF209 /* AppDelegate.swift in Sources */,
