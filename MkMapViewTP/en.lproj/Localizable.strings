@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  MkMapViewTP
+
+  Created by Bérangère La Touche on 15/11/2017.
+  Copyright © 2017 Bérangère La Touche. All rights reserved.
+*/
+
+"controllers.new_apple_store.title" = "New  Apple Store";
+"controllers.new_apple_store.title_label" = "Title*";
+"controllers.new_apple_store.title_textFieldLat" = "Latitude";
+"controllers.new_apple_store.title_textFieldLng" = "Longitude";
+
+"app.vocabulary.error_title" = "Error";
+"app.vocabulary.error_form_message" = "Missing fields";
+"app.vocabulary.close" = "Close";

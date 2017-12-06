@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainStoreViewController" customModule="MkMapViewTP" customModuleProvider="target">
+            <connections>
+                <outlet property="childContentView" destination="J2e-Ka-AoW" id="BBi-5r-kKe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-Ka-AoW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzC-kU-jiL">
+                    <rect key="frame" x="16" y="625" width="22" height="22"/>
+                    <connections>
+                        <action selector="switchController:" destination="-1" eventType="touchUpInside" id="DST-Lv-rk1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaF-Sh-MAl">
+                    <rect key="frame" x="337" y="625" width="22" height="22"/>
+                    <connections>
+                        <action selector="touchNewAppleStore:" destination="-1" eventType="touchUpInside" id="MOq-aU-eii"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="J2e-Ka-AoW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5g9-Ih-fMS"/>
+                <constraint firstAttribute="bottom" secondItem="J2e-Ka-AoW" secondAttribute="bottom" id="9kL-M5-mxz"/>
+                <constraint firstItem="J2e-Ka-AoW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DUY-gl-jsP"/>
+                <constraint firstAttribute="bottom" secondItem="kzC-kU-jiL" secondAttribute="bottom" constant="20" id="GvE-st-kCS"/>
+                <constraint firstAttribute="trailing" secondItem="gaF-Sh-MAl" secondAttribute="trailing" constant="16" id="Pux-1r-QF9"/>
+                <constraint firstAttribute="bottom" secondItem="gaF-Sh-MAl" secondAttribute="bottom" constant="20" id="QqS-tK-ZTo"/>
+                <constraint firstAttribute="trailing" secondItem="J2e-Ka-AoW" secondAttribute="trailing" id="qno-Kc-kIc"/>
+                <constraint firstItem="kzC-kU-jiL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="w1O-5n-k7q"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
