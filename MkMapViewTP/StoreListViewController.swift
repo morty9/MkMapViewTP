@@ -19,7 +19,7 @@ class StoreListViewController: UIViewController {
         self.storeCollectionView.delegate = self
         self.storeCollectionView.dataSource = self
         
-        self.storeCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "AZERTYUIOP")
+        self.storeCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Store")
     }
 
 }
@@ -32,7 +32,7 @@ extension StoreListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AZERTYUIOP", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Store", for: indexPath)
         cell.contentView.backgroundColor = .red
         
         return cell
@@ -42,7 +42,14 @@ extension StoreListViewController: UICollectionViewDataSource {
 
 extension StoreListViewController: UICollectionViewDelegateFlowLayout {
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        //pour designer une cellule différemment
+//        if indexPath.item == 0 {
+//            return CGSize(width: 10, height: 10)
+//        }
+        
         var width = collectionView.bounds.width
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             width -= layout.minimumInteritemSpacing

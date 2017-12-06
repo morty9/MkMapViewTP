@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083225C31FD82FB8003540B6 /* StoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083225C21FD82FB8003540B6 /* StoreCollectionViewCell.xib */; };
 		087717CF1FBC7D0000ADF209 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087717CE1FBC7D0000ADF209 /* AppDelegate.swift */; };
 		087717D61FBC7D0000ADF209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087717D51FBC7D0000ADF209 /* Assets.xcassets */; };
 		087717D91FBC7D0000ADF209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087717D71FBC7D0000ADF209 /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		083225C21FD82FB8003540B6 /* StoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCollectionViewCell.xib; sourceTree = "<group>"; };
 		087717CB1FBC7D0000ADF209 /* MkMapViewTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MkMapViewTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		087717CE1FBC7D0000ADF209 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		087717D51FBC7D0000ADF209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				088A60B21FBDA86200F35F49 /* StoreListViewController.xib */,
 				088A60B51FBDAA2000F35F49 /* UIViewController+ChildViewController.swift */,
 				088A60B71FBDB01D00F35F49 /* StoreProvider.swift */,
+				083225C21FD82FB8003540B6 /* StoreCollectionViewCell.xib */,
 			);
 			path = MkMapViewTP;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083225C31FD82FB8003540B6 /* StoreCollectionViewCell.xib in Resources */,
 				087717EA1FBC919D00ADF209 /* Localizable.strings in Resources */,
 				088A60AC1FBDA2BD00F35F49 /* MainStoreViewController.xib in Resources */,
 				088A60B41FBDA86200F35F49 /* StoreListViewController.xib in Resources */,
