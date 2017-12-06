@@ -43,7 +43,10 @@ extension StoreListViewController: UICollectionViewDataSource {
 extension StoreListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width
+        var width = collectionView.bounds.width
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            width -= layout.minimumInteritemSpacing
+        }
         return CGSize(width: width / 2, height: width / 2)
     }
     
