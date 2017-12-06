@@ -15,7 +15,7 @@ public protocol NewAppleStoreViewControllerDelegate: class {
     
 }
 
-public class NewAppleStoreViewController: UIViewController {
+public class NewAppleStoreViewController: MyViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var latitudeTextField: UITextField!

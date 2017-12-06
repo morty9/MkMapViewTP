@@ -25,6 +25,7 @@
 		088A60B41FBDA86200F35F49 /* StoreListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088A60B21FBDA86200F35F49 /* StoreListViewController.xib */; };
 		088A60B61FBDAA2000F35F49 /* UIViewController+ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A60B51FBDAA2000F35F49 /* UIViewController+ChildViewController.swift */; };
 		088A60B81FBDB01D00F35F49 /* StoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A60B71FBDB01D00F35F49 /* StoreProvider.swift */; };
+		088CE1FC1FD84143002D7ACD /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CE1FB1FD84143002D7ACD /* MyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		088A60B21FBDA86200F35F49 /* StoreListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreListViewController.xib; sourceTree = "<group>"; };
 		088A60B51FBDAA2000F35F49 /* UIViewController+ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChildViewController.swift"; sourceTree = "<group>"; };
 		088A60B71FBDB01D00F35F49 /* StoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProvider.swift; sourceTree = "<group>"; };
+		088CE1FB1FD84143002D7ACD /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				088A60B71FBDB01D00F35F49 /* StoreProvider.swift */,
 				083225C21FD82FB8003540B6 /* StoreCollectionViewCell.xib */,
 				083225C41FD83263003540B6 /* StoreCollectionViewCell.swift */,
+				088CE1FB1FD84143002D7ACD /* MyViewController.swift */,
 			);
 			path = MkMapViewTP;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				088A60B31FBDA86200F35F49 /* StoreListViewController.swift in Sources */,
 				088A60A81FBD8C9000F35F49 /* Store.swift in Sources */,
 				087717CF1FBC7D0000ADF209 /* AppDelegate.swift in Sources */,
+				088CE1FC1FD84143002D7ACD /* MyViewController.swift in Sources */,
 				087717E21FBC7D4C00ADF209 /* MapViewController.swift in Sources */,
 				087717F01FBC9E9600ADF209 /* PortraitNavigationController.swift in Sources */,
 				087717E61FBC8D0900ADF209 /* NewAppleStoreViewController.swift in Sources */,

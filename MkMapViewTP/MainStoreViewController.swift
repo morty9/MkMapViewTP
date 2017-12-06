@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainStoreViewController: UIViewController, StoreProvider {
+class MainStoreViewController: MyViewController, StoreProvider {
     
     var stores: [Store] = []
 
@@ -21,7 +21,9 @@ class MainStoreViewController: UIViewController, StoreProvider {
     }()
     
     lazy var listViewController: StoreListViewController = {
-        return StoreListViewController()
+        let listViewController = StoreListViewController()
+        listViewController.storeProvider = self
+        return listViewController
     }()
     
     public var visibleViewController: UIViewController {
@@ -40,7 +42,7 @@ class MainStoreViewController: UIViewController, StoreProvider {
     @IBAction func switchController(_ sender: Any) {
         
         let visibleViewController = self.visibleViewController
-        self.removeVisibleChildViewController(visibleViewController)
+        self.removeVisibleChildViewController(visibleViewController as! MyViewController)
         if visibleViewController == self.mapViewController {
             UIView.beginAnimations("flip_animation", context: nil)
             UIView.setAnimationTransition(.flipFromRight, for: self.childContentView, cache: false)

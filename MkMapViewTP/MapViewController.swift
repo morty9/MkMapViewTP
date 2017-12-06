@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: MyViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
@@ -62,7 +62,7 @@ extension MapViewController: MKMapViewDelegate {
         } else {
             let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: MapViewController.appleStoreIdentifier)
             pin.canShowCallout = true
-            pin.pinTintColor = .blue
+            pin.pinTintColor = .red
             return pin
         }
     }

@@ -8,14 +8,14 @@
 
 import UIKit
 
-extension UIViewController {
+extension MyViewController {
  
-    func removeVisibleChildViewController(_ childController: UIViewController) {
+    func removeVisibleChildViewController(_ childController: MyViewController) {
         childController.removeFromParentViewController()
         childController.view.removeFromSuperview()
     }
     
-    func addChildViewController(_ childController: UIViewController, in subview: UIView) {
+    func addChildViewController(_ childController: MyViewController, in subview: UIView) {
         
         guard let view = childController.view else {
             return

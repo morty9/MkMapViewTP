@@ -8,9 +8,11 @@
 
 import UIKit
 
-class StoreListViewController: UIViewController {
+class StoreListViewController: MyViewController {
 
     @IBOutlet weak var storeCollectionView: UICollectionView!
+    
+    weak var storeProvider : StoreProvider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +21,12 @@ class StoreListViewController: UIViewController {
         self.storeCollectionView.delegate = self
         self.storeCollectionView.dataSource = self
         
-        self.storeCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Store")
+        self.storeCollectionView.register(UINib(nibName: "StoreCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Store")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.storeCollectionView.reloadData()
     }
 
 }
@@ -27,13 +34,25 @@ class StoreListViewController: UIViewController {
 extension StoreListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5;
+        return self.storeProvider?.stores.count ?? 0;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Store", for: indexPath)
+        
+        guard let store = self.storeProvider?.stores[indexPath.item] else {
+            fatalError("Not possible")
+        }
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Store", for: indexPath)
-        cell.contentView.backgroundColor = .red
+        cell.contentView.backgroundColor = .gray
+        
+        if let storeCell = cell as? StoreCollectionViewCell {
+            storeCell.titleLabel.text = store.name
+            storeCell.latLabel.text = String(store.coordinate.latitude)
+            storeCell.lonLabel.text = String(store.coordinate.longitude)
+        }
         
         return cell
     }
