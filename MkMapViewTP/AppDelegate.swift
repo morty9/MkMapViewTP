@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var context: NSManagedObjectContext?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.context = loadContext()
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = MainStoreViewController()
+        let coreDataMainViewController = MainStoreViewController()
+        coreDataMainViewController.context = self.context
+        window.rootViewController = coreDataMainViewController
         window.makeKeyAndVisible()
         self.window = window
         return true
@@ -46,5 +51,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate {
+    
+    func loadContext() -> NSManagedObjectContext? {
+        guard
+            let schemaURL = Bundle.main.url(forResource: "MkMapViewTP", withExtension: "momd"),
+            let model = NSManagedObjectModel(contentsOf: schemaURL)
+            else {
+            return nil
+        }
+        let store = NSPersistentStoreCoordinator(managedObjectModel: model)
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return nil
+        }
+        let storageURL = documentDirectory.appendingPathComponent("mapDB.sqlite")
+        print(storageURL)
+        _ = try? store.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storageURL, options: nil)
+        let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        context.persistentStoreCoordinator = store
+        self.context = context
+        
+        return context
+    }
+    
 }
 

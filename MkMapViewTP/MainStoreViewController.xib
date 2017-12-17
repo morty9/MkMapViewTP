@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -30,12 +30,6 @@
                         <action selector="switchController:" destination="-1" eventType="touchUpInside" id="DST-Lv-rk1"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaF-Sh-MAl">
-                    <rect key="frame" x="337" y="625" width="22" height="22"/>
-                    <connections>
-                        <action selector="touchNewAppleStore:" destination="-1" eventType="touchUpInside" id="MOq-aU-eii"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -43,8 +37,6 @@
                 <constraint firstAttribute="bottom" secondItem="J2e-Ka-AoW" secondAttribute="bottom" id="9kL-M5-mxz"/>
                 <constraint firstItem="J2e-Ka-AoW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DUY-gl-jsP"/>
                 <constraint firstAttribute="bottom" secondItem="kzC-kU-jiL" secondAttribute="bottom" constant="20" id="GvE-st-kCS"/>
-                <constraint firstAttribute="trailing" secondItem="gaF-Sh-MAl" secondAttribute="trailing" constant="16" id="Pux-1r-QF9"/>
-                <constraint firstAttribute="bottom" secondItem="gaF-Sh-MAl" secondAttribute="bottom" constant="20" id="QqS-tK-ZTo"/>
                 <constraint firstAttribute="trailing" secondItem="J2e-Ka-AoW" secondAttribute="trailing" id="qno-Kc-kIc"/>
                 <constraint firstItem="kzC-kU-jiL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="w1O-5n-k7q"/>
             </constraints>

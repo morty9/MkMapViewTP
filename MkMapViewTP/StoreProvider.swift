@@ -10,6 +10,6 @@ import Foundation
 
 public protocol StoreProvider: class {
     
-    var stores: [Store] { get }
+    var stores: [Stores] { get }
     
 }

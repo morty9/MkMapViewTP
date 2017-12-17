@@ -7,22 +7,26 @@
 //
 
 import UIKit
+import CoreData
 
 class MainStoreViewController: MyViewController, StoreProvider {
     
-    var stores: [Store] = []
-
+    var stores: [Stores] = []
+    public var context: NSManagedObjectContext!
+    
     @IBOutlet weak var childContentView: UIView!
     
     lazy var mapViewController: MapViewController = {
         let mapViewController =  MapViewController()
         mapViewController.storeProvider = self
+        mapViewController.context = self.context
         return mapViewController
     }()
     
     lazy var listViewController: StoreListViewController = {
         let listViewController = StoreListViewController()
         listViewController.storeProvider = self
+        listViewController.context = self.context
         return listViewController
     }()
     
@@ -35,7 +39,6 @@ class MainStoreViewController: MyViewController, StoreProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.addChildViewController(self.mapViewController, in: childContentView)
     }
     
@@ -61,6 +64,7 @@ class MainStoreViewController: MyViewController, StoreProvider {
     @IBAction func touchNewAppleStore(_ sender: Any) {
         let appleStoreViewController = NewAppleStoreViewController()
         appleStoreViewController.delegate = self
+        appleStoreViewController.context = self.context
         self.present(PortraitNavigationController(rootViewController: appleStoreViewController), animated: true)
     }
 
@@ -68,7 +72,7 @@ class MainStoreViewController: MyViewController, StoreProvider {
 
 extension MainStoreViewController: NewAppleStoreViewControllerDelegate {
     
-    func newAppleStoreViewController(_ newAppleStoreViewController: NewAppleStoreViewController, didCreateStore store: Store) {
+    func newAppleStoreViewController(_ newAppleStoreViewController: NewAppleStoreViewController, didCreateStore store: Stores) {
         self.stores.append(store)
         newAppleStoreViewController.dismiss(animated: true)
     }

@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewAppleStoreViewController" customModule="MkMapViewTP" customModuleProvider="target">
             <connections>
+                <outlet property="addressLabel" destination="zgN-2Y-lin" id="dL0-vZ-hIa"/>
+                <outlet property="addressTextField" destination="ztC-Yq-jS0" id="j8g-Pm-3Nu"/>
                 <outlet property="latitudeLabel" destination="v89-rC-bnM" id="f7T-tc-JO8"/>
                 <outlet property="latitudeTextField" destination="mwN-7X-N2W" id="02N-4w-evf"/>
                 <outlet property="lonLabel" destination="IFt-uM-6co" id="A3f-cC-WV4"/>
@@ -52,7 +55,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moK-Z0-8hS">
-                    <rect key="frame" x="40" y="127" width="295" height="47"/>
+                    <rect key="frame" x="40" y="186" width="295" height="47"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwN-7X-N2W">
                             <rect key="frame" x="83" y="15" width="202" height="17"/>
@@ -77,8 +80,34 @@
                         <constraint firstAttribute="trailing" secondItem="mwN-7X-N2W" secondAttribute="trailing" constant="10" id="saZ-x3-sqd"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7y-qh-LjZ">
+                    <rect key="frame" x="40" y="123" width="295" height="47"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztC-Yq-jS0">
+                            <rect key="frame" x="87" y="15" width="198" height="17"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgN-2Y-lin">
+                            <rect key="frame" x="10" y="13" width="67" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ztC-Yq-jS0" firstAttribute="top" secondItem="x7y-qh-LjZ" secondAttribute="top" constant="15" id="MQb-kP-Vwf"/>
+                        <constraint firstAttribute="bottom" secondItem="ztC-Yq-jS0" secondAttribute="bottom" constant="15" id="Q5K-wI-dkG"/>
+                        <constraint firstItem="zgN-2Y-lin" firstAttribute="centerY" secondItem="x7y-qh-LjZ" secondAttribute="centerY" id="Q5w-E4-QR9"/>
+                        <constraint firstItem="zgN-2Y-lin" firstAttribute="leading" secondItem="x7y-qh-LjZ" secondAttribute="leading" constant="10" id="bhB-uV-Yhe"/>
+                        <constraint firstItem="ztC-Yq-jS0" firstAttribute="leading" secondItem="zgN-2Y-lin" secondAttribute="trailing" constant="10" id="nLh-hf-zsa"/>
+                        <constraint firstAttribute="trailing" secondItem="ztC-Yq-jS0" secondAttribute="trailing" constant="10" id="ySH-N9-4tk"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLh-Ii-WlO">
-                    <rect key="frame" x="40" y="194" width="295" height="47"/>
+                    <rect key="frame" x="40" y="247" width="295" height="47"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRL-rp-mbg">
                             <rect key="frame" x="101.5" y="15" width="183.5" height="17"/>
@@ -106,15 +135,18 @@
             </subviews>
             <color key="backgroundColor" red="0.88235288860000005" green="0.88235288860000005" blue="0.88235288860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="x7y-qh-LjZ" secondAttribute="trailing" constant="40" id="0qJ-2e-BGD"/>
                 <constraint firstItem="moK-Z0-8hS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="Fa5-fB-GsN"/>
+                <constraint firstItem="x7y-qh-LjZ" firstAttribute="top" secondItem="nDz-bk-oo2" secondAttribute="bottom" constant="16" id="N0m-Ud-xz9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="moK-Z0-8hS" secondAttribute="trailing" constant="40" id="T68-th-eTK"/>
+                <constraint firstItem="moK-Z0-8hS" firstAttribute="top" secondItem="x7y-qh-LjZ" secondAttribute="bottom" constant="16" id="TQG-aN-0dL"/>
                 <constraint firstItem="nDz-bk-oo2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="ZWe-eg-LJg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nDz-bk-oo2" secondAttribute="trailing" constant="40" id="aDq-VF-zeu"/>
                 <constraint firstItem="nDz-bk-oo2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="c3p-m7-l2q"/>
+                <constraint firstItem="x7y-qh-LjZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="eC9-4k-Dzg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZLh-Ii-WlO" secondAttribute="trailing" constant="40" id="f0W-fq-t62"/>
-                <constraint firstItem="ZLh-Ii-WlO" firstAttribute="top" secondItem="moK-Z0-8hS" secondAttribute="bottom" constant="20" id="lxo-fR-lNp"/>
+                <constraint firstItem="ZLh-Ii-WlO" firstAttribute="top" secondItem="moK-Z0-8hS" secondAttribute="bottom" constant="14" id="lxo-fR-lNp"/>
                 <constraint firstItem="ZLh-Ii-WlO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="oB5-SQ-xi8"/>
-                <constraint firstItem="moK-Z0-8hS" firstAttribute="top" secondItem="nDz-bk-oo2" secondAttribute="bottom" constant="20" id="uaY-Bu-M0D"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="54.5"/>
